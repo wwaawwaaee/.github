@@ -30,12 +30,18 @@ Current AI coding tools (Cursor, Claude Code, GitHub Copilot) operate at the **t
 SVP introduces **Layered Compilation**—a classic software engineering approach adapted for the AI age:
 
 ```
-Intent (L5) → Architecture (L4) → Logic (L3) → Skeleton (L2) → Code (L1)
-     ↑                                                            ↓
-  Humans design                                               AI compiles
+Prompt/Requirements ─→ Blueprint/Intent ─→ Logic Chain/Architecture ─→ Logic Blocks ─→ Code Blocks/cpp ─→ Code/asm
+          ↑  Human-readable  Human-readable  Human-readable  Auditable   Derived artifacts
+          └────────── Human Input Layer ──────────────────────────┘
+                              ↓
+                         AI is the "Compiler"
+                              ↓
+                    One-way generation, no reverse modification
 ```
 
-**Core principle**: The upper layers are the **source of truth**; lower layers are **derived artifacts**. When you need to change something, edit the upper layers and recompile—not the generated code. This mirrors how we treat compiled binaries: you don't patch the binary, you modify the source and rebuild.
+**Core Principle**: Upper layers are the **source of truth**; lower layers are **derived artifacts**. When you need to make changes, edit the upper IR and recompile—don't directly modify the generated code.
+
+Just as you wouldn't patch a `.o` file and expect the `.c` file to automatically update—AI shouldn't directly modify code. Instead, modify the upper-layer IR, then `make` again.
 
 ---
 
@@ -44,6 +50,26 @@ Intent (L5) → Architecture (L4) → Logic (L3) → Skeleton (L2) → Code (L1)
 ### The Layered Compilation Model
 
 SVP transforms software engineering from "writing code directly" to "designing at abstraction layers, compiled by AI":
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      Human Editing Layer (Source of Truth)              │
+├─────────────────────────────────────────────────────────────────────────┤
+│  L5: Blueprint    │  Intent documents (why)                               │
+│  L4: Logic Chain  │  Program flowcharts/architecture diagrams (what)      │
+│  L3: Logic Block  │  Pseudocode/contracts (how)                           │
+├─────────────────────────────────────────────────────────────────────────┤
+│                        SVP Compilation Pipeline (One-way)               │
+├─────────────────────────────────────────────────────────────────────────┤
+│  L2: Code Block   │  AI-generated code templates (impl skeleton)          │
+│  L1: Code         │  Actual runnable code (full implementation)           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Principles:
+1. Upper layers are source data, lower layers are derived artifacts—like .c → .o → binary
+2. Humans edit only L5-L3, AI compiles to L2-L1
+3. Want to change code? Edit the upper-layer IR and recompile—never directly modify L1
+```
 
 ```
 Intent (L5) → Architecture (L4) → Logic (L3) → Skeleton (L2) → Implementation (L1)
