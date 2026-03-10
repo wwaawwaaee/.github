@@ -1,6 +1,6 @@
+# Semantic Voxel Protocol
 <div align="center">
   <img src="../logo/logo.png" alt="SVP Logo" width="120" />
-  <h1>Semantic Voxel Protocol (SVP)</h1>
   <p><strong>AI と人間の協働プログラミングのための認知インフラストラクチャ</strong></p>
 </div>
 
@@ -8,7 +8,7 @@
 
 <div align="center">
 
-**[English](./README_EN.md) | 日本語 | [中文](./README.md)**
+**[English](./README.md) | 日本語 | [中文](./README_ZH.md)**
 
 </div>
 
