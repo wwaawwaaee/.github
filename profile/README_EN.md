@@ -1,6 +1,8 @@
-# Semantic Voxel Protocol (SVP)
-
-**Cognitive Infrastructure for AI-Human Collaborative Programming**
+<div align="center">
+  <img src="../logo/logo.png" alt="SVP Logo" width="120" />
+  <h1>Semantic Voxel Protocol (SVP)</h1>
+  <p><strong>Cognitive Infrastructure for AI-Human Collaborative Programming</strong></p>
+</div>
 
 ---
 

@@ -1,6 +1,8 @@
-# Semantic Voxel Protocol (SVP)
-
-**AI と人間の協働プログラミングのための認知インフラストラクチャ**
+<div align="center">
+  <img src="../logo/logo.png" alt="SVP Logo" width="120" />
+  <h1>Semantic Voxel Protocol (SVP)</h1>
+  <p><strong>AI と人間の協働プログラミングのための認知インフラストラクチャ</strong></p>
+</div>
 
 ---
 

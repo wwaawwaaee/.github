@@ -1,6 +1,8 @@
-# Semantic Voxel Protocol (SVP)
-
-**AI-Human 协作编程的认知基础设施**
+<div align="center">
+  <img src="../logo/logo.png" alt="SVP Logo" width="120" />
+  <h1>Semantic Voxel Protocol (SVP)</h1>
+  <p><strong>AI-Human 协作编程的认知基础设施</strong></p>
+</div>
 
 ---
 
